@@ -1,0 +1,8 @@
+<skp-search
+(onTyping)="filter = $event" [value]="filter">
+</skp-search>
+<skp-photos [photos]="photos | filterByDescription: filter "></skp-photos>
+<skp-load-button
+(click)="load()"
+ [hasMore]="hasMore">
+</skp-load-button>
